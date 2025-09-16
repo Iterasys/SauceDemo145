@@ -1,0 +1,38 @@
+Modos de execução
+- Headless (padrão): sem exibição
+--> Não tem interferência do usuário
+--> Leve
+- Headed: com exibição
+
+Melhores localizadores (2025):
+- data-test (W3C)
+- id
+- name
+- cssSelector
+- class ou tag
+- xPath
+
+3 Fatores comuns de erro em automação:
+- Seletor ruim
+- Falta de Sincronismo
+- "Programação Exótica"
+
+Agenda
+- Até a aula 18: Playwright
+- 19 a 24: Appium
+- 25 a 28: Postman
+- 29 a 32: REST-assured
+Termina: 19/novembro
+
+Tem previsão para adicionar os testes em CI/CD
+- Precisaria ensinar um pouco sobre Infra / Nuvem
+- Na maioria das empresas, não é o QA que faz --> DevOps
+
+Abordagens de automação
+- Capture and Playback / Record and Play --> Selenium IDE
+- Script Simples - tudo junto em um só arquivo
+- Script Estruturado --> organiza o que se usa em 2 ou + locais em um 3º local 
+
+Credencias do GitHub para o Git
+git config --global user.name "Iterasys"
+git config --global user.email "contato@iterasys.com"
