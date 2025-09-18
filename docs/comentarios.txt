@@ -29,10 +29,32 @@ Tem previsão para adicionar os testes em CI/CD
 - Na maioria das empresas, não é o QA que faz --> DevOps
 
 Abordagens de automação
-- Capture and Playback / Record and Play --> Selenium IDE
+- Capture and Playback / Record and Play --> Selenium IDE / Playwright Codegen
 - Script Simples - tudo junto em um só arquivo
 - Script Estruturado --> organiza o que se usa em 2 ou + locais em um 3º local 
 
 Credencias do GitHub para o Git
 git config --global user.name "Iterasys"
 git config --global user.email "contato@iterasys.com"
+
+Decisão de imitar a navegação do usuário ou otimizar a velocidade
+
+// imitou o usuário
+  await page.locator('[data-test="username"]').click();
+  await page.locator('[data-test="username"]').fill('standard_user');
+
+// otimizou a execução
+  await page.locator('[data-test="username"]').fill('standard_user');
+
+E quando tem mais de um jeito de interagir
+- clicar ou dar tab (login do Saucedemo)
+- clicar na lupa ou dar Enter (Google)
+
+Comandos para teclado:
+<Tab>: await page.press('[data-test="username"]', 'Tab')
+<Enter>: await page.locator(name="q", 'Enter')
+
+Sortear ações? Pode ser uma alternativa a fazer só 1 
+const usarClique = Math.random() < 0.7; // 70% das vezes clique e 30% Tab
+
+Arquivo de configuração do Playwright: playwright.config.js
