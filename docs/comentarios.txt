@@ -58,3 +58,4 @@ Sortear ações? Pode ser uma alternativa a fazer só 1
 const usarClique = Math.random() < 0.7; // 70% das vezes clique e 30% Tab
 
 Arquivo de configuração do Playwright: playwright.config.js
+
