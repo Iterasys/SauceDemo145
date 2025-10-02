@@ -44,6 +44,7 @@ function compute_run_folder(baseDir){
 function ensure_subdirs(runDir){
     const dirs = {
         runDir,
+        resultsDir:     path.join(runDir, 'test-results'),
         screenshotsDir: path.join(runDir, 'screenshots')
     }
 

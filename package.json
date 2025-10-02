@@ -1,10 +1,14 @@
 {
   "name": "saucedemo145",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "Playwright E2E - modelo hibrido",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report",
+    "clean": "rimraf artifacts playwright-report test-results"
 
   },
   "keywords": [],
@@ -13,6 +17,6 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "playwright": "^1.55.0"
+    "rimraf": "^6.0.1"
   }
 }
