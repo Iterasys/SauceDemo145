@@ -8,7 +8,7 @@ function isoTs() {
     return nova_data.toISOString().replace('T', ' ').replace('Z', '')
 }
 
-const LOGS_DIR = process.env.LOGS_DIR || path.join(process.cwd, 'artifacts', 'logs') 
+const LOGS_DIR = process.env.LOGS_DIR || path.join(process.cwd(), 'artifacts', 'logs') 
 if (!fs.existsSync(LOGS_DIR)) fs.mkdirSync(LOGS_DIR, {recursive: true})
 
 // cria o arquivo de log para a execução    

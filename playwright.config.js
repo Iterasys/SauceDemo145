@@ -16,6 +16,7 @@ module.exports = defineConfig({
     timeout: 30000,      // 30_000 = 30 segundos
     fullyParallel: true, // execução em paralelo / multi thread
     outputDir: resultsDir,
+    testDir: './tests', 
     use: {
         baseURL: 'https://www.saucedemo.com',
         headless: false, // false - exibe o browser e true oculta

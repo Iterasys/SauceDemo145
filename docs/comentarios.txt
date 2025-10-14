@@ -33,6 +33,7 @@ Abordagens de automação
 - Script Simples - tudo junto em um só arquivo
 - Script Estruturado --> organiza o que se usa em 2 ou + locais em um 3º local 
 
+
 Credencias do GitHub para o Git
 git config --global user.name "Iterasys"
 git config --global user.email "contato@iterasys.com"
