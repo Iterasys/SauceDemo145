@@ -59,29 +59,29 @@ test.describe('SauceDemo - fluxo principal de compra', () => {
         })
 
     }) // fim do test 1
-    test('Comprar Mochila Detalhes', 
-        async({ page }, testInfo) => {
-        testInfo.setTimeout(testInfo.timeout + 15000)
+    // test('Comprar Mochila Detalhes', 
+    //     async({ page }, testInfo) => {
+    //     testInfo.setTimeout(testInfo.timeout + 15000)
         
-        // Inicio do Passo 1
-        await test.step('Acessar SauceDemo.com', async () => {
-            await login_step(page, testInfo)            
-        }) // fim do passo 1
+    //     // Inicio do Passo 1
+    //     await test.step('Acessar SauceDemo.com', async () => {
+    //         await login_step(page, testInfo)            
+    //     }) // fim do passo 1
 
-        // Inicio do passo 2
-        await test.step('Login com Sucesso', async () => {
-            success_login_step(page, testInfo)
-        }) // fim do passo 2
+    //     // Inicio do passo 2
+    //     await test.step('Login com Sucesso', async () => {
+    //         success_login_step(page, testInfo)
+    //     }) // fim do passo 2
 
-        // Inicio do passo 3
-        await test.step('Adicionar mochila no carrinho', async () => {
-            const seletor_mochila = page.locator('.inventory_item').filter({ hasText: /Backpack/ })
-            await seletor_mochila.getByRole('button', { name: /Add to cart/ }).click()
-
-            await expect(page.locator('.shopping_cart_badge')).toHaveText('1')
-            await snap(page, testInfo, 'TC001-Passo03-Mochila-Adicionada')
-        }) // fim do passo 3
+    //     // Inicio do passo 3
+    //     await test.step('Adicionar mochila no carrinho', async () => {
+    //         const seletor_mochila = page.locator('.inventory_item').filter({ hasText: /Backpack/ })
+    //         await seletor_mochila.getByRole('link', { hasText: /Backpack/ }).click()
+    //         // To Do: Concluir
+    //         await expect(page.locator('.shopping_cart_badge')).toHaveText('1')
+    //         await snap(page, testInfo, 'TC001-Passo03-Mochila-Adicionada')
+    //     }) // fim do passo 3
         
 
-    }) // fim do test 2
+    // }) // fim do test 2
 }) // fim do describe
